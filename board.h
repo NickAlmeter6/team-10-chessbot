@@ -28,7 +28,8 @@ class Board{
     public:
         Board();
         void printBoard();
-        void isLegal(ChessMove move);
-
+        bool isLegal(ChessMove move);
+        void makeMove(ChessMove move);
+        bitset<64> getOccupied();
 };
 #endif
