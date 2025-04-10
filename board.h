@@ -31,5 +31,7 @@ class Board{
         bool isLegal(ChessMove move);
         void makeMove(ChessMove move);
         bitset<64> getOccupied();
+        bitset<64> getBlack();
+        bitset<64> getWhite();
 };
 #endif

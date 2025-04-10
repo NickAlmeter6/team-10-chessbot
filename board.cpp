@@ -117,9 +117,25 @@ void Board::printBoard(){
     }
 }
 
-bitset<64> getOccupied(){
+bitset<64> Board::getOccupied(){
     bitset<64> compound = 0;
     for(int i = 0; i < 12; i++){
+        compound |= pieces[i];
+    }
+    return compound;
+}
+
+bitset <64> Board::getWhite(){
+    bitset<64> compound = 0;
+    for(int i = 0; i < 12; i+=2){
+        compound |= pieces[i];
+    }
+    return compound;
+}
+
+bitset <64> Board::getBlack(){
+    bitset<64> compound = 0;
+    for(int i = 1; i < 12; i+=2){
         compound |= pieces[i];
     }
     return compound;
